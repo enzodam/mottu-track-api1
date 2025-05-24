@@ -56,7 +56,7 @@ Sistema de rastreamento e gestão de motos compartilhadas, com:
 
 1. Clone o repositório:
    
-   git clone https://github.com/seu-usuario/mottu-track-api.git
+   git clone https://github.com/enzodam/mottu-track-api1
 
   
 2. Configure o banco de dados:
