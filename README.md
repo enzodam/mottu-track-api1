@@ -1,6 +1,6 @@
 # 🏍️ Mottu Track API
 
-API REST para gestão de motos e filiais desenvolvida para o Challenge FIAP.
+API REST para gestão de motos e filiais desenvolvida para o Challenge 1º SPRINT.
 
 
 ## 📋 Descrição do Projeto
