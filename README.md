@@ -41,36 +41,68 @@ Sistema de rastreamento e gestão de motos compartilhadas, com:
 | Luan Dantas dos Santos        | 559004  | [@lds2125](https://github.com/lds2125) |
 
 
-## 🚀 Como Executar
+## 🚀 Executando o Projeto
+
 
 ### Pré-requisitos
 
-- JDK 17
+- JDK 17 instalado
   
-- Maven 3.8+
+- Maven 3.8+ (opcional para quem usa IDE)
   
-- Oracle Database (ou Docker para container Oracle)
+- Banco de dados Oracle configurado ou Docker
   
 
-### Passo a Passo
+### ▶️ Execução
 
-1. Clone o repositório:
+1. Clone o repositório
+
+git clone https://github.com/enzodam/mottu-track-api1.git
+
+
+2. Acesse a pasta do projeto
    
-   git clone https://github.com/enzodam/mottu-track-api1
-
-  
-2. Configure o banco de dados:
-
-Edite o application.properties com suas credenciais Oracle
+cd mottu-track-api1
 
 
-3. Execute a aplicação:
+3. Configuração do Banco de Dados
+
+Edite o arquivo src/main/resources/application.properties:
+
+properties
+
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+
+spring.datasource.username=SEU_USUARIO
+
+spring.datasource.password=SUA_SENHA
+
+
+4. Abrir e rodar a API : Via IntelliJ (Recomendado):
+
+Abra o projeto no IntelliJ
+
+Clique no botão ▶️ (Run) ao lado da classe MottuTrackApi1Application
+
+ou
+
+Via Terminal (Maven):
+
+mvn clean install
 
 mvn spring-boot:run
 
+Via Executável:
 
-4. Acesse a documentação:
+java -jar target/mottu-track-api1-1.0.0.jar
 
-Swagger UI: http://localhost:8080/swagger-ui.html
 
-API Docs: http://localhost:8080/v3/api-docs
+📚 Documentação da API
+
+Acesse automaticamente após iniciar a aplicação:
+
+
+Interface Swagger UI: 🌐 http://localhost:8080/swagger-ui.html
+
+
+Endpoint JSON: 📋 http://localhost:8080/v3/api-docs
