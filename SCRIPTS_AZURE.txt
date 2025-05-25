@@ -1,0 +1,35 @@
+CRIAÇÃO VM:
+
+az vm create --resource-group rg-linux-free --name linux-docker-azure-cli --location brazilsouth --image almalinux:almalinux-x86_64:9-gen2:9.6.202505220 --size Standard_B2ats_v2 --admin-username admlnx --admin-password "Fiap@2tdsr25" --nsg-rule SSH
+
+LIGAR VM:
+
+az vm start --resource-group rg-linux-free --name linux-docker-azure-cli 
+
+BAIXAR GIT NA VM
+
+sudo yum install git -y
+git --version
+
+Instalando o NANO
+
+sudo yum install nano -y
+
+INSTALANDO AZURE CLI
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+sudo dnf install -y https://packages.microsoft.com/config/rhel/9.0/packages-microsoft-prod.rpm
+
+sudo dnf install azure-cli -y
+
+az --version
+
+Instalando o Docker:
+
+sudo yum install -y yum-utils -y
+sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo systemctl start docker
+sudo docker run hello-world
+
