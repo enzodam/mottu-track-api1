@@ -87,12 +87,7 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<?> cadastrar(@Valid @RequestBody UsuarioDTO usuarioDTO) {
         try {
-            // Password needs special handling - assuming DTO might temporarily hold it for creation
-            // Or better, use a specific CreateUserDTO with password field
             Usuario usuario = convertToEntity(usuarioDTO);
-            // TODO: Set password hash securely in the service layer, not here.
-            // For now, assuming the DTO doesn't carry the raw password for security.
-            // If it did, you'd extract it here and pass to service.
             Usuario novoUsuario = usuarioService.cadastrar(usuario);
             return ResponseEntity.status(HttpStatus.CREATED).body(convertToDto(novoUsuario));
         } catch (IllegalArgumentException | EntityNotFoundException e) {
