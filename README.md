@@ -57,7 +57,7 @@ Sistema de rastreamento e gestão de motos compartilhadas, com:
 
 1. Clone o repositório
 
-git clone https://github.com/enzodam/mottu-track-api1.git
+git clone https://github.com/enzodam/mottu-track-api1
 
 
 2. Acesse a pasta do projeto
@@ -71,7 +71,7 @@ Edite o arquivo src/main/resources/application.properties:
 
 properties
 
-spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:orcl
 
 spring.datasource.username=SEU_USUARIO
 
